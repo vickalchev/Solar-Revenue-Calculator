@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500" rel="stylesheet">
+    <link rel="stylesheet" type="text/CSS" href="index.css">
+
+    <title>Solar Revenue Calculator</title>
+</head>
+<body>
+    <h1> Solar Revenue Calculator</h1>
+    <div class="bkgContainer">
+        <main class="container">
+            <form>
+                <input id="systemSize" required type="number"  placeholder="System size">
+                <input id="systemYield" required type ="number"  placeholder="System yield">
+                <input id="ratePerKWh" required type="number"  placeholder="Rate per kWh">
+                <button id="btn">Calculate</button>
+            </form>
+            <p id="clearInputs">Clear</p>
+            <h1 id="showResult"></h1>
+        </main>
+    </div> 
+<script type="text/JavaScript" src="index.js"></script>
+</body>
+</html>
