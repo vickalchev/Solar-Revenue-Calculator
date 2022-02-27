@@ -1,9 +1,10 @@
-//To calculate revenue from a solar generation site, we need to multiply the system size, the yield and the $rate.
+// To calculate revenue from a solar generation site, we need to multiply the system size, the yield and the $rate.
 
-//Declaring a button variable, which is bound to the #btn id in the html file
+// Declaring a button variable, which is bound to the #btn id in the html file
 
 const button = document.getElementById("btn");
 button.addEventListener("click", calculate); //When we click the button, the calculate function gets called.
+
 const clearInputs = document.getElementById("clearInputs");
 clearInputs.addEventListener("click", clear); //When we click the button, the clear function gets called.
 
@@ -15,12 +16,14 @@ function calculate() {
     const result = systemSize*systemYield*ratePerKWh; // the calculation of the output number. 
 
     return document.getElementById("showResult").innerHTML = '$'+ result.toLocaleString();
+    
 }
 
 function clear() {
     inputs = document.querySelectorAll('#systemSize, #systemYield, #ratePerKWh');
-    inputs.forEach(input => input.value = '')};
-
+    inputs.forEach(input => input.value = '');
+};
+    
 
 
 
