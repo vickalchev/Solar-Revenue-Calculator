@@ -12,12 +12,17 @@ function calculate() {
     const systemSize = document.getElementById("systemSize").value;
     const systemYield = document.getElementById("systemYield").value;
     const ratePerKWh = document.getElementById("ratePerKWh").value;
-
-    const result = systemSize*systemYield*ratePerKWh; // the calculation of the output number. 
-
-    return document.getElementById("showResult").innerHTML = '$'+ result.toLocaleString();
+    let result; 
+    if (systemSize < 0 || systemYield <0 || ratePerKWh <0) {
+       return console.log('Enter positive values only');}
+    else {
+        result = systemSize*systemYield*ratePerKWh; // the calculation of the output number. 
+        console.log(typeof(result));
     
-}
+        return document.getElementById("showResult").innerHTML = '$'+ result.toLocaleString();
+    }
+    
+    }
 
 function clear() {
     inputs = document.querySelectorAll('#systemSize, #systemYield, #ratePerKWh');
